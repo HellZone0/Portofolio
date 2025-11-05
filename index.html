@@ -1,92 +1,63 @@
-<!-- index.html -->
 <!doctype html>
 <html lang="id" data-theme="light">
 <head>
   <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
-  <title>Portfolio — Nama Kamu</title>
-  <meta name="description" content="Portofolio satu halaman: About, Skills, Projects, Experience, Contact. UI modern, animasi elegan, cepat, dan aksesibel.">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Portofolio — Nama Kamu</title>
+  <meta name="description" content="Portofolio pribadi: About, Skills, Projects, Experience, Contact dengan desain modern dan responsif.">
 
-  <!-- SEO: Open Graph -->
+  <!-- Open Graph / Twitter -->
+  <meta property="og:title" content="Portofolio — Nama Kamu">
+  <meta property="og:description" content="Frontend Engineer | UI Modern | Aksesibilitas tinggi.">
+  <meta property="og:image" content="assets/og-image.webp">
   <meta property="og:type" content="website">
-  <meta property="og:title" content="Portfolio — Nama Kamu">
-  <meta property="og:description" content="Portofolio satu halaman: About, Skills, Projects, Experience, Contact.">
-  <meta property="og:image" content="assets/og-image.jpg">
-  <meta property="og:url" content="https://contoh-domainmu.com/">
 
-  <!-- SEO: Twitter -->
-  <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="Portfolio — Nama Kamu">
-  <meta name="twitter:description" content="Portofolio satu halaman: About, Skills, Projects, Experience, Contact.">
-  <meta name="twitter:image" content="assets/og-image.jpg">
-
-  <!-- Performance: preconnect Google Fonts -->
-  <link rel="preconnect" href="https://fonts.googleapis.com" crossorigin>
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <!-- Google Fonts (display=swap untuk rendering cepat) -->
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Calistoga&display=swap" rel="stylesheet">
 
   <!-- Icons -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" integrity="sha512-hash" crossorigin="anonymous" referrerpolicy="no-referrer">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
   <script defer src="https://unpkg.com/feather-icons"></script>
 
-  <!-- Styles -->
+  <!-- CSS & JS -->
   <link rel="stylesheet" href="styles.css">
-  <!-- JS -->
   <script defer src="main.js"></script>
-
-  <!-- PWA/Meta kecil -->
-  <meta name="theme-color" content="#111827">
 </head>
 <body>
-  <!-- Skip link untuk aksesibilitas -->
-  <a class="skip-link" href="#main">Lewati ke konten utama</a>
+  <a class="skip-link" href="#main">Lewati ke konten</a>
 
-  <!-- Header sticky + blur -->
-  <header class="site-header" role="banner" aria-label="Navigasi utama">
+  <header class="site-header">
     <div class="container nav-wrap">
-      <a href="#" class="brand" aria-label="Beranda">
-        <span class="logo" aria-hidden="true">◆</span>
-        <span class="brand-text">Nama Kamu</span>
-      </a>
-      <nav aria-label="Bagian halaman">
+      <a href="#" class="brand"><span class="logo">◆</span><span class="brand-text">Nama Kamu</span></a>
+      <nav>
         <ul class="nav">
           <li><a href="#about">About</a></li>
           <li><a href="#skills">Skills</a></li>
           <li><a href="#projects">Projects</a></li>
           <li><a href="#experience">Experience</a></li>
           <li><a href="#contact">Contact</a></li>
-          <li>
-            <button id="themeToggle" class="icon-btn" aria-label="Toggle dark/light mode" title="Ganti tema">
-              <i data-feather="sun" class="theme-icon theme-icon--sun" aria-hidden="true"></i>
-              <i data-feather="moon" class="theme-icon theme-icon--moon" aria-hidden="true"></i>
-            </button>
-          </li>
+          <li><button id="themeToggle" class="icon-btn"><i data-feather="sun"></i><i data-feather="moon"></i></button></li>
         </ul>
       </nav>
     </div>
   </header>
 
-  <!-- Hero dengan parallax halus -->
-  <section class="hero" aria-label="Perkenalan">
-    <!-- Layer latar untuk parallax -->
+  <section class="hero">
     <div class="hero-bg" aria-hidden="true">
       <div class="orb orb--1"></div>
       <div class="orb orb--2"></div>
       <div class="orb orb--3"></div>
     </div>
-
     <div class="container hero-inner">
-      <h1 class="hero-title">
-        <span class="kicker">Halo, saya</span>
-        <span class="name">Nama Kamu</span>
-      </h1>
-      <p class="hero-subtitle">Frontend Engineer yang suka membangun <strong>UI cepat</strong>, <strong>aksesibel</strong>, dan <strong>indah</strong>.</p>
+      <h1 class="hero-title"><span class="kicker">Halo, saya</span><span class="name">Nama Kamu</span></h1>
+      <p class="hero-subtitle">Frontend Engineer yang membangun web cepat, estetis, dan aksesibel.</p>
       <div class="hero-cta">
-        <a class="btn btn-primary" href="#projects">Lihat Projects</a>
-        <a class="btn btn-ghost" href="#contact">Hubungi Saya</a>
+        <a href="#projects" class="btn btn-primary">Lihat Projects</a>
+        <a href="#contact" class="btn btn-ghost">Hubungi Saya</a>
       </div>
-      <ul class="hero-highlights" role="list">
+      <ul class="hero-highlights">
         <li><i data-feather="zap"></i> Performa ≥ 90</li>
         <li><i data-feather="shield"></i> Aksesibilitas AA</li>
         <li><i data-feather="cpu"></i> Web modern</li>
@@ -94,205 +65,113 @@
     </div>
   </section>
 
-  <main id="main" tabindex="-1">
-    <!-- About -->
-    <section id="about" class="section reveal" aria-labelledby="about-title">
+  <main id="main">
+    <section id="about" class="section reveal">
       <div class="container">
-        <header class="section-head">
-          <h2 id="about-title">About</h2>
-          <p>Sedikit tentang saya dan apa yang saya kerjakan.</p>
-        </header>
+        <header class="section-head"><h2>About</h2><p>Tentang saya</p></header>
         <div class="grid about-grid">
           <div class="about-media card">
-            <!-- Gambar lazy dengan AVIF/WebP + fallback -->
             <picture>
-              <source srcset="assets/profile.avif" type="image/avif">
-              <source srcset="assets/profile.webp" type="image/webp">
-              <img src="assets/profile.jpg" alt="Foto profil Nama Kamu" loading="lazy" width="560" height="560">
+              <source srcset="https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?auto=format&fit=crop&w=600&q=60" type="image/webp">
+              <img src="https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?auto=format&fit=crop&w=600&q=60" alt="Foto profil" loading="lazy">
             </picture>
           </div>
           <div class="about-text card">
-            <p>Saya fokus pada pengalaman pengguna yang mulus: tipografi rapi, kontras kuat, dan animasi 200–500ms yang tidak mengganggu. Saya percaya pada <em>progressive enhancement</em> dan menghormati preferensi pengguna, termasuk <code>prefers-reduced-motion</code>.</p>
-            <ul class="list-check" role="list">
-              <li><i class="fa-solid fa-check" aria-hidden="true"></i> React, TypeScript, Web Performance</li>
-              <li><i class="fa-solid fa-check" aria-hidden="true"></i> A11y (WCAG 2.2 AA), SEO teknis</li>
-              <li><i class="fa-solid fa-check" aria-hidden="true"></i> Design systems & tooling modern</li>
-            </ul>
+            <p>Saya fokus pada UI modern dan cepat dengan perhatian terhadap detail dan aksesibilitas. Saya mencintai desain sistem, tipografi, dan animasi halus.</p>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- Skills -->
-    <section id="skills" class="section reveal" aria-labelledby="skills-title">
+    <section id="skills" class="section reveal">
       <div class="container">
-        <header class="section-head">
-          <h2 id="skills-title">Skills</h2>
-          <p>Hal yang sering saya gunakan.</p>
-        </header>
+        <header class="section-head"><h2>Skills</h2><p>Keahlian utama</p></header>
         <div class="grid skills-grid">
-          <article class="skill card">
-            <i data-feather="code" aria-hidden="true"></i>
-            <h3>Frontend</h3>
-            <p>HTML5, CSS3 (CSS-in-JS), JS/TS, React, Vite</p>
-          </article>
-          <article class="skill card">
-            <i data-feather="sliders" aria-hidden="true"></i>
-            <h3>UI/UX</h3>
-            <p>Design system, A11y, Motion, Figma</p>
-          </article>
-          <article class="skill card">
-            <i data-feather="activity" aria-hidden="true"></i>
-            <h3>Performance</h3>
-            <p>Core Web Vitals, lazy-load, code-split</p>
-          </article>
-          <article class="skill card">
-            <i data-feather="lock" aria-hidden="true"></i>
-            <h3>Best Practice</h3>
-            <p>Testing, lint/format, CI/CD</p>
-          </article>
+          <article class="skill card"><i data-feather="code"></i><h3>Frontend</h3><p>HTML, CSS, JS/TS, React</p></article>
+          <article class="skill card"><i data-feather="sliders"></i><h3>UI/UX</h3><p>Desain Sistem, A11y, Figma</p></article>
+          <article class="skill card"><i data-feather="activity"></i><h3>Performance</h3><p>Core Web Vitals</p></article>
+          <article class="skill card"><i data-feather="lock"></i><h3>Best Practice</h3><p>Testing, CI/CD</p></article>
         </div>
       </div>
     </section>
 
-    <!-- Projects + filter tags -->
-    <section id="projects" class="section reveal" aria-labelledby="projects-title">
+    <section id="projects" class="section reveal">
       <div class="container">
-        <header class="section-head">
-          <h2 id="projects-title">Projects</h2>
-          <p>Pilih kategori untuk memfilter kartu.</p>
-        </header>
-
-        <div class="filterbar" role="tablist" aria-label="Filter proyek">
-          <button class="chip is-active" role="tab" aria-selected="true" data-filter="all">Semua</button>
-          <button class="chip" role="tab" aria-selected="false" data-filter="web">Web</button>
-          <button class="chip" role="tab" aria-selected="false" data-filter="ui">UI</button>
-          <button class="chip" role="tab" aria-selected="false" data-filter="perf">Performance</button>
+        <header class="section-head"><h2>Projects</h2><p>Beberapa karya terbaru</p></header>
+        <div class="filterbar">
+          <button class="chip is-active" data-filter="all">Semua</button>
+          <button class="chip" data-filter="web">Web</button>
+          <button class="chip" data-filter="ui">UI</button>
         </div>
-
         <div class="grid projects-grid">
-          <!-- Card proyek: gunakan data-tags untuk filter -->
-          <article class="project card tilt reveal" data-tags="web ui">
+          <article class="project card tilt" data-tags="web ui">
             <div class="project-media">
               <picture>
-                <source srcset="assets/p1.avif" type="image/avif"><source srcset="assets/p1.webp" type="image/webp">
-                <img src="assets/p1.jpg" alt="Tangkapan layar proyek dashboard analytics" loading="lazy" width="640" height="360">
+                <source srcset="https://images.unsplash.com/photo-1603791452906-cf0b0b92e8d2?auto=format&fit=crop&w=800&q=60" type="image/webp">
+                <img src="https://images.unsplash.com/photo-1603791452906-cf0b0b92e8d2?auto=format&fit=crop&w=800&q=60" alt="Dashboard project" loading="lazy">
               </picture>
             </div>
             <div class="project-body">
               <h3>Dashboard Analytics</h3>
-              <p>Dashboard interaktif dengan chart real-time dan tema adaptif.</p>
-              <div class="tags"><span>#web</span><span>#ui</span></div>
-              <a class="btn btn-ghost" href="#" aria-label="Buka proyek Dashboard Analytics">Demo</a>
+              <p>Dashboard interaktif dengan tema adaptif dan chart real-time.</p>
             </div>
           </article>
-
-          <article class="project card tilt reveal" data-tags="perf web">
+          <article class="project card tilt" data-tags="web">
             <div class="project-media">
-              <picture>
-                <source srcset="assets/p2.avif" type="image/avif"><source srcset="assets/p2.webp" type="image/webp">
-                <img src="assets/p2.jpg" alt="Landing page super cepat" loading="lazy" width="640" height="360">
-              </picture>
+              <img src="https://images.unsplash.com/photo-1498050108023-c5249f4df085?auto=format&fit=crop&w=800&q=60" alt="Landing page cepat" loading="lazy">
             </div>
             <div class="project-body">
               <h3>Ultra-Fast Landing</h3>
-              <p>Skor Lighthouse 99+ melalui optimasi aset & strategi caching.</p>
-              <div class="tags"><span>#perf</span><span>#web</span></div>
-              <a class="btn btn-ghost" href="#" aria-label="Buka proyek Ultra-Fast Landing">Demo</a>
+              <p>Skor Lighthouse 99+ dengan optimasi gambar & cache.</p>
             </div>
           </article>
-
-          <article class="project card tilt reveal" data-tags="ui">
+          <article class="project card tilt" data-tags="ui">
             <div class="project-media">
-              <picture>
-                <source srcset="assets/p3.avif" type="image/avif"><source srcset="assets/p3.webp" type="image/webp">
-                <img src="assets/p3.jpg" alt="Komponen UI design system" loading="lazy" width="640" height="360">
-              </picture>
+              <img src="https://images.unsplash.com/photo-1607083205984-4a4afaae7c34?auto=format&fit=crop&w=800&q=60" alt="Design System" loading="lazy">
             </div>
             <div class="project-body">
               <h3>Design System</h3>
-              <p>Koleksi komponen aksesibel dengan theming dan tokens.</p>
-              <div class="tags"><span>#ui</span></div>
-              <a class="btn btn-ghost" href="#" aria-label="Buka proyek Design System">Demo</a>
+              <p>Koleksi komponen aksesibel dengan token dan theming.</p>
             </div>
           </article>
         </div>
       </div>
     </section>
 
-    <!-- Experience -->
-    <section id="experience" class="section reveal" aria-labelledby="exp-title">
+    <section id="experience" class="section reveal">
       <div class="container">
-        <header class="section-head">
-          <h2 id="exp-title">Experience</h2>
-          <p>Ringkasan pengalaman kerja.</p>
-        </header>
-
-        <ul class="timeline" role="list">
-          <li class="timeline-item card">
-            <div class="timeline-head">
-              <h3>Senior Frontend Engineer — PT Maju Jaya</h3>
-              <span class="time">2023—Sekarang</span>
-            </div>
-            <p>Pimpin migrasi ke React + Vite, turunkan TTI 38% dan tingkatkan A11y ke AA.</p>
-          </li>
-          <li class="timeline-item card">
-            <div class="timeline-head">
-              <h3>Frontend Engineer — Startup XYZ</h3>
-              <span class="time">2020—2023</span>
-            </div>
-            <p>Membangun design system, menurunkan bug UI 45% dan mempercepat pengiriman fitur.</p>
-          </li>
+        <header class="section-head"><h2>Experience</h2><p>Perjalanan karier</p></header>
+        <ul class="timeline">
+          <li class="timeline-item card"><div class="timeline-head"><h3>Frontend Engineer — PT Maju</h3><span>2023–Sekarang</span></div><p>Mengembangkan UI dinamis dengan performa tinggi.</p></li>
+          <li class="timeline-item card"><div class="timeline-head"><h3>UI Developer — XYZ Studio</h3><span>2020–2023</span></div><p>Membangun design system dan meningkatkan aksesibilitas.</p></li>
         </ul>
       </div>
     </section>
 
-    <!-- Contact -->
-    <section id="contact" class="section reveal" aria-labelledby="contact-title">
+    <section id="contact" class="section reveal">
       <div class="container">
-        <header class="section-head">
-          <h2 id="contact-title">Contact</h2>
-          <p>Kirim pesan—saya akan balas secepatnya.</p>
-        </header>
-
-        <form id="contactForm" class="card form" novalidate aria-describedby="formHelp">
-          <div class="field">
-            <label for="name">Nama</label>
-            <input id="name" name="name" type="text" placeholder="Nama lengkap" autocomplete="name" required aria-required="true">
-            <small class="error" id="err-name" role="alert"></small>
-          </div>
-          <div class="field">
-            <label for="email">Email</label>
-            <input id="email" name="email" type="email" placeholder="nama@email.com" autocomplete="email" required aria-required="true" inputmode="email">
-            <small class="error" id="err-email" role="alert"></small>
-          </div>
-          <div class="field">
-            <label for="message">Pesan</label>
-            <textarea id="message" name="message" rows="5" placeholder="Tulis pesanmu..." required aria-required="true"></textarea>
-            <small class="error" id="err-message" role="alert"></small>
-          </div>
-          <div class="form-actions">
-            <button class="btn btn-primary" type="submit">Kirim</button>
-            <p id="formHelp" class="form-help">Semua kolom wajib. Data tidak disimpan ke server (demo).</p>
-          </div>
+        <header class="section-head"><h2>Contact</h2><p>Kirim pesan</p></header>
+        <form id="contactForm" class="card form" novalidate>
+          <div class="field"><label for="name">Nama</label><input id="name" name="name" required><small class="error" id="err-name"></small></div>
+          <div class="field"><label for="email">Email</label><input id="email" name="email" type="email" required><small class="error" id="err-email"></small></div>
+          <div class="field"><label for="message">Pesan</label><textarea id="message" name="message" rows="5" required></textarea><small class="error" id="err-message"></small></div>
+          <div class="form-actions"><button class="btn btn-primary" type="submit">Kirim</button></div>
         </form>
       </div>
     </section>
   </main>
 
-  <!-- Footer -->
   <footer class="site-footer">
     <div class="container footer-inner">
-      <p>© <span id="year"></span> Nama Kamu. Dibuat dengan ♥︎.</p>
-      <ul class="social" role="list" aria-label="Media sosial">
-        <li><a href="#" aria-label="GitHub"><i data-feather="github"></i></a></li>
-        <li><a href="#" aria-label="LinkedIn"><i data-feather="linkedin"></i></a></li>
-        <li><a href="#" aria-label="Twitter/X"><i data-feather="twitter"></i></a></li>
+      <p>© <span id="year"></span> Nama Kamu</p>
+      <ul class="social">
+        <li><a href="#"><i data-feather="github"></i></a></li>
+        <li><a href="#"><i data-feather="linkedin"></i></a></li>
+        <li><a href="#"><i data-feather="twitter"></i></a></li>
       </ul>
     </div>
   </footer>
 
-  <!-- Toast sukses (aria-live untuk aksesibilitas) -->
-  <div id="toast" class="toast" role="status" aria-live="polite" aria-atomic="true"></div>
+  <div id="toast" class="toast" role="status"></div>
 </body>
 </html>

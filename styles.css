@@ -230,3 +230,19 @@ input::placeholder, textarea::placeholder{color:color-mix(in oklab, var(--muted)
   .tilt{transform:none !important}
   .orb{display:none}
 }
+
+/* ===== Responsive Fixes for Mobile (≤480px) ===== */
+@media (max-width:480px) {
+  .hero {
+    text-/* ===== Responsive Fixes for Mobile (≤480px) ===== */
+@media (max-width:480px){
+  .hero{text-align:center;padding:80px 0 64px;}
+  .hero-cta{justify-content:center;}
+  .hero-highlights{flex-direction:column;align-items:center;gap:.5rem;}
+  .section-head{flex-direction:column;align-items:flex-start;text-align:left;}
+  .about-grid,.skills-grid,.projects-grid{grid-template-columns:1fr;}
+  .card{padding:1rem;}
+  .btn{width:100%;justify-content:center;}
+  .filterbar{justify-content:flex-start;overflow-x:auto;scrollbar-width:none;}
+  .filterbar::-webkit-scrollbar{display:none;}
+}
